@@ -81,7 +81,12 @@ export default function Home() {
       </button>
 
       <p>{feedback}</p>
-      <p>Attempts left: {attemptsLeft}</p>
+      <p>Attempts left: {attemptsLeft}</p> 
+      {gameOver && (
+  <button onClick={startGame} style={{ marginTop: 10 }}>
+    Restart Game
+  </button>
+)}
     </main>
   );
 }
