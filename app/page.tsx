@@ -42,7 +42,7 @@ export default function Home() {
       setFeedback('Correct! You won!');
       setGameOver(true);
     } else if (newAttempts === 0) {
-      setFeedback(You lost. The number was ${secretNumber});
+      setFeedback(`You lost. The number was ${secretNumber}`);
       setGameOver(true);
     } else {
       setFeedback(num < secretNumber ? 'Too low!' : 'Too high!');
