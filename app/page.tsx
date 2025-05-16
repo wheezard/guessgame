@@ -31,7 +31,7 @@ export default function Home() {
   const handleGuess = () => {
     const num = parseInt(guess, 10);
     if (isNaN(num) || num < 1 || num > 100) {
-      setFeedback('⚠ Please enter a number between 1 and 100');
+      setFeedback('Please enter a number between 1 and 100');
       return;
     }
 
@@ -39,13 +39,13 @@ export default function Home() {
     setAttemptsLeft(newAttempts);
 
     if (num === secretNumber) {
-      setFeedback('🎉 Correct! You won!');
+      setFeedback('Correct! You won!');
       setGameOver(true);
     } else if (newAttempts === 0) {
-      setFeedback(❌ You lost. The number was ${secretNumber});
+      setFeedback(You lost. The number was ${secretNumber});
       setGameOver(true);
     } else {
-      setFeedback(num < secretNumber ? '🔻 Too low!' : '🔺 Too high!');
+      setFeedback(num < secretNumber ? 'Too low!' : 'Too high!');
     }
 
     setGuess('');
